@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	Boostrap CSS fils -->
+	<link rel="stylesheet" type="text/css" href="../my-module/bootstrap.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="../bootstrap/css/style.css"> -->
+	<title>Emplolyee Portal | AJAX</title>
+</head>
+<body>
+<!-- 	Navbar -->
+	<nav class="navbar navbar-dark bg-dark">
+		<a href="#" class="navbar-brand">AJAX Basics</a>
+	</nav>
+
+<!-- Employee portal intro -->
+<div class="container mt-3">
+	<div class="row">
+		<div class="col">
+			<h1>Employee Portal</h1>
+			<p class="lead">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<button class="btn btn-success shadow-none" data-bs-target="#add-employee-modal" data-bs-toggle="modal">Add Employee</button>
+		</div>
+	</div>
+</div>
+
+<!-- Add Employee Modal -->
+<div class="modal fade animated slideInLeft" id="add-employee-modal" tabindex="1">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content animated slideInLeft">
+		<div class="modal-header bg-success text-white">
+			<h3>Add Employee</h3>
+			<button class="close rounded-circle" data-bs-dismiss="modal">&times;</button>
+		</div>
+		<div class="modal-body bg-secondary p-4">
+			<form id="add-employee-form">
+				<div class="form-group mt-3">
+					<input  id="add-fname" type="text" class="form-control" placeholder="First Name">
+				</div>
+				<div class="form-group mt-3">
+					<input  id="add-lname" type="text" class="form-control" placeholder="Last Name">
+				</div>
+				<div class="form-group mt-3">
+					<input  id="add-email" type="email" class="form-control" placeholder="Email">
+				</div>
+				<div class="form-group mt-3">
+					<select  id="add-gender" class="form-control">
+						<option value="" selected disabled>Select Gender</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</div>
+				<div class="form-group mt-3">
+					<input  id="add-ip" type="text" class="form-control" placeholder="IP Address">
+				</div>
+				<div align="right" class="mt-4">
+					<input type="submit" value="Add Employee" class="btn btn-success">
+				</div>
+			</form>
+		</div>		
+	</div>
+	</div>
+</div>
+
+
+
+<!-- Update Employee modal -->
+<div class="modal fade animated slideInLeft" id="update-employee-modal" tabindex="1">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content animated slideInLeft">
+		<div class="modal-header bg-success text-white">
+			<h3>Update Employee</h3>
+			<button class="close rounded-circle" data-bs-dismiss="modal">&times;</button>
+		</div>
+		<div class="modal-body bg-secondary p-4">
+			<form id="update-employee-form">
+				<div class="form-group mt-3" >
+					<input readonly id="update-id" type="text" class="form-control" placeholder="Employee ID">
+				</div>
+				<div class="form-group mt-3" >
+					<input  id="update-fname" type="text" class="form-control" placeholder="First Name">
+				</div>
+				<div class="form-group mt-3">
+					<input  id="update-lname" type="text" class="form-control" placeholder="Last Name">
+				</div>
+				<div class="form-group mt-3">
+					<input  id="update-email" type="email" class="form-control" placeholder="Email">
+				</div>
+				<div class="form-group mt-3">
+					<select  id="update-gender" class="form-control">
+						<option value="" selected disabled>Select Gender</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+					</select>
+				</div>
+				<div class="form-group mt-3">
+					<input  id="update-ip" type="text" class="form-control" placeholder="IP Address">
+				</div>
+				<div align="right" class="mt-4">
+					<input type="submit" value="Update Employee" class="btn btn-success">
+				</div>
+			</form>
+		</div>		
+	</div>
+	</div>
+</div>
+
+
+
+
+<!-- Employee Table -->
+<div class="container mt-3">
+	<div class="row">
+		<div class="col">
+			<table class="table table-hover table-striped text-center">
+				<thead class="bg-dark text-white">
+					<tr>
+						<th>EMPLOYEE ID</th>
+						<th>FIRST NAME</th>
+						<th>LAST NAME</th>
+						<th>EMAIL</th>
+						<th>GENDER</th>
+						<th>IP ADDRESS</th>
+						<th>ACTIONS</th>
+					</tr>
+				</thead>
+				<tbody id="table-body">
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!-- Bootstrap JS files -->
+<!-- <script src="../bootstrap/js/bootstrap.js"></script> -->
+<script src="../my-module/bootstrap.js"></script>
+<!-- <script type="module" src="../bootstrap/js/jQuery.js"></script> -->
+<!-- Application JS file -->
+<!-- <script type="module" src="./api/kingchi.js"></script> -->
+<script src="..\my-module\jQuery.js"></script>
+<script type="module" src="app.js"></script>
+
+</body>
+</html>
