@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 //GET - Employee
-/*let emp = `
+let employeesJson = `
 [
   {
     "id": "w3233e",
@@ -47,10 +47,9 @@ const router = express.Router();
     "ip_address": "132.5.3.8.1"
   }
 ]`;
-*/
 
-let raw = fs.readFileSync('../../employees.json');
-let employees = JSON.parse(raw);
+// let raw = fs.readFileSync('../../employees.json');
+let employees = JSON.parse(employeesJson);
 
 
 // let db = JSON.stringify(emp,null,2);
