@@ -49,12 +49,12 @@ const router = express.Router();
 ]`;
 */
 
-let raw = fs.readFileSync('../../employees.json');
+let raw = fs.readFileSync('../employees.json');
 let employees = JSON.parse(raw);
 
 
 // let db = JSON.stringify(emp,null,2);
-// fs.writeFile('../../employees.json', db, cb);
+// fs.writeFile('../employees.json', db, cb);
 // function cb() {
 // 	log('db reset');
 // }
@@ -115,7 +115,7 @@ router.post('/employees',(req,res) => {
 	employees.push(employee);
 	// log(employees)
 	let raw = JSON.stringify(employees, null, 2);
-	fs.writeFile('../../employees.json', raw, cb);
+	fs.writeFile('../employees.json', raw, cb);
 	function cb() {
 		log('file written');
 	}
@@ -142,7 +142,7 @@ router.put('/employees/:id', (req,res) => {
 	};
 	employees.splice(employees.indexOf(extEmployee),1,updatedEmployee);
 	let raw = JSON.stringify(employees, null, 2);
-	fs.writeFile('../../employees.json', raw, cb);
+	fs.writeFile('../employees.json', raw, cb);
 	function cb() {
 		log('file written');
 	}
@@ -163,7 +163,7 @@ router.delete('/employees/:id', (req,res) => {
 		return
 	}
 	let raw = JSON.stringify(employees, null, 2);
-	fs.writeFile('../../employees.json', raw, cb);
+	fs.writeFile('../employees.json', raw, cb);
 	function cb() {
 		log('file written');
 	}
