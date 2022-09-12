@@ -1,5 +1,5 @@
 import { AJAX } from "./api/kingchi.js";
-const serverUrl = 'http://127.0.0.1:5000/api';
+const serverUrl = 'https://server-node.glitch.me/api';
 
 
 let getBtn = document.querySelector('#get-btn');
