@@ -12,7 +12,8 @@ const urlEncodedParser = bodyParser.urlencoded({ extended: false });
 app.use(jsonParser);
 app.use(urlEncodedParser);
 
-const hostname = '127.0.0.1';
+const hostname = process.env.HOSTNAME;
+// const hostname = '127.0.0.1';
 // const port = 5000;
 const port = process.env.PORT || 5000;
 
@@ -31,7 +32,7 @@ app.use((req,res) => {
 	res.status(404).sendFile('./client/404.html',{root: __dirname})
 })
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
 	log(`Express Server is started at http://${hostname}:${port}`);
 });
 
